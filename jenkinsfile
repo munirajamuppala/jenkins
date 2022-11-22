@@ -1,0 +1,9 @@
+pipeline
+agent any
+stages{
+stage('example'){
+steps{
+echo "Runnging ${env.BUILD_ID} ON ${env_JENKINS_URL}
+}
+}
+}
