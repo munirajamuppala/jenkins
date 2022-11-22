@@ -1,9 +1,13 @@
-pipeline
+pipeline{
 agent any
+parrametres{
+string(name:"Greeting", defultname: "hello", description: "How ")
+}
 stages{
-stage('example'){
+stage('Example') {
 steps{
-echo "Runnging ${env.BUILD_ID} ON ${env_JENKINS_URL}
+echo "${params.Greeting} weclome"
+}
 }
 }
 }
